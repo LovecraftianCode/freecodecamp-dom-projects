@@ -14,7 +14,6 @@
 - [Cómo visualizar los proyectos](#cómo-visualizar-los-proyectos)
 - [Estructura del repositorio](#estructura-del-repositorio)
 - [Ejemplo de código](#ejemplo-de-código)
-- [Recursos útiles](#recursos-útiles)
 - [Autor](#autor)
 
 ## Sobre este repositorio
@@ -46,6 +45,7 @@ Este repositorio contiene **8 proyectos prácticos** realizados durante mi apren
 | **JavaScript ES6+** | Lógica, manipulación del DOM, eventos |
 | **Git & GitHub** | Control de versiones y portafolio |
 
+
 ## Conceptos aprendidos
 
 ### Selectores del DOM
@@ -55,14 +55,50 @@ document.getElementById()
 document.querySelector()
 document.querySelectorAll()
 document.getElementsByClassName()
+```
+### Manipulacion de elementos
+```javascript
+// Crear, leer, actualizar, eliminar
+createElement()
+appendChild()
+removeChild()
+innerHTML / textContent
+classList.add() / remove() / toggle()
+```
 
-##Estructura del repositorio
+### Eventos
+```javascript
+// Eventos manejados
+click, change, input, submit
+keydown, keyup, load, DOMContentLoaded
+
+// Event listener
+element.addEventListener('click', (e) => {
+  console.log(e.target.value)
+})
+```
+### Array methods aplicados
+
+```javascript
+filter()    // Filtrar jugadores por posición
+map()       // Crear HTML dinámico
+forEach()   // Iterar elementos
+join()      // Convertir array a string
+```
+
+## Cómo visualizar los proyectos
+
+Instalar Live Server en VS Code
+Click derecho en index.html → "Open with Live Server"
+
+## Estructura del repositorio
+```Bash
 dom-manipulation-practice/
 │
-├── README.md                          # Este archivo
+├── README.md                          
 │
 ├── 00-theory/
-│   └── notes.md                       # Apuntes teóricos
+│   └── notes.md                       
 │
 ├── 01-storytelling-app/
 │   ├── index.html
@@ -103,3 +139,37 @@ dom-manipulation-practice/
     ├── index.html
     ├── styles.css
     └── script.js
+```
+
+## Ejemplo de código
+```javascript
+// Función que filtra y renderiza las tarjetas de jugadores
+function playerCards(playerPosition) {
+  // Filtrar según la posición seleccionada
+  const filteredPlayers = playerPosition === "all"
+    ? players  // Todos los jugadores
+    : players.filter(({ position }) => position === playerPosition);
+
+  // Generar HTML para cada jugador
+  return filteredPlayers.map(({ name, position, isCaptain }) => {
+    const playerName = isCaptain ? `(Captain) ${name}` : name;
+    
+    return `
+      <div class="player-card">
+        <h2>${playerName}</h2>
+        <p>Position: ${position}</p>
+      </div>
+    `;
+  });
+}
+
+// Event listener para el filtro
+selectContainer.addEventListener("change", (e) => {
+  const selectedPosition = e.target.value;
+  playerscontainer.innerHTML = playerCards(selectedPosition).join("");
+});
+```
+
+##  Autor
+@LovecraftianCode
+Proyecto realizado como parte del aprendizaje en freeCodeCamp
