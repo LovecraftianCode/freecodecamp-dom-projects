@@ -171,5 +171,5 @@ selectContainer.addEventListener("change", (e) => {
 ```
 
 ##  Autor
-@LovecraftianCode
-Proyecto realizado como parte del aprendizaje en freeCodeCamp
+- @LovecraftianCode
+- Proyecto realizado como parte del aprendizaje en freeCodeCamp
