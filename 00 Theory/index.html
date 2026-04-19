@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animaciones con JavaScript - Ejemplos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Ejemplos de Animaciones</h1>
+  
+  <div class="container">
+    <div class="ejemplo">
+      <h2>1. Animación con requestAnimationFrame</h2>
+      <div id="rect" class="rect">freeCodeCamp is Awesome</div>
+    </div>
+
+    <div class="ejemplo">
+      <h2>2. Animación con Web Animations API</h2>
+      <div class="square" id="square"></div>
+    </div>
+
+    <div class="ejemplo">
+      <h2>3. Modal Dialog</h2>
+      <button id="open-modal-btn" class="btn">Open Modal Dialog</button>
+    </div>
+  </div>
+
+  <dialog id="modal">
+    <p>✨ This is a modal dialog. ✨</p>
+    <button id="close-modal-btn" class="btn">Close Modal</button>
+  </dialog>
+
+  <script src="index.js"></script>
+</body>
+</html>
