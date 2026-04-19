@@ -1,4 +1,4 @@
-# 🎯 DOM Manipulation Projects - FreeCodeCamp Practice
+# DOM Manipulation Projects - FreeCodeCamp Practice
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -6,7 +6,7 @@
 
 > **Colección de proyectos prácticos** para aprender y dominar la manipulación del DOM con JavaScript puro.
 
-## 📋 Tabla de Contenidos
+## Tabla de Contenidos
 - [Sobre este repositorio](#sobre-este-repositorio)
 - [Proyectos incluidos](#proyectos-incluidos)
 - [Tecnologías utilizadas](#tecnologías-utilizadas)
